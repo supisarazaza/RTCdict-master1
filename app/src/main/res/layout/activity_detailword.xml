@@ -34,7 +34,8 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/textView5"
         android:layout_above="@+id/button"
-        android:layout_margin="20dp">
+        android:layout_margin="20dp"
+        android:background="@android:color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,7 +48,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView6"
                 android:textSize="18sp"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                android:layout_margin="20dp" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
