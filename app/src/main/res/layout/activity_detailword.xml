@@ -27,7 +27,8 @@
         android:layout_height="wrap_content"
         android:onClick="clickBack"
         android:id="@+id/button"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:background="@android:drawable/button_onoff_indicator_on" />
 
     <ScrollView
         android:layout_width="match_parent"
