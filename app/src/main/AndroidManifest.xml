@@ -17,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Detailword"></activity>
+        <activity android:name=".Detailword" />
+        <activity android:name=".Splashscreen"></activity>
     </application>
 
 </manifest>
