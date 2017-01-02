@@ -2,8 +2,8 @@ package com.journaldev.searchview;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.View;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private List<String> arrayList= new ArrayList<>();
 
-    private String[] wordStrings, detailStrings;
+    private String[] wordStrings, detailStrings, idStrings;
 
 
     @Override
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
             wordStrings = new String[jsonArray.length()];
             detailStrings = new String[jsonArray.length()];
+            idStrings = new String[jsonArray.length()];
 
             for (int i=0;i<jsonArray.length();i++) {
 
@@ -52,8 +53,12 @@ public class MainActivity extends AppCompatActivity {
 
                 wordStrings[i] = jsonObject.getString("Word");
                 detailStrings[i] = jsonObject.getString("Detail");
+                idStrings[i] = jsonObject.getString("id");
 
                 arrayList.add(wordStrings[i]);
+
+                Log.d("2janV1", "word(" + i + ") ==> " + wordStrings[i]);
+                Log.d("2janV2", "detail(" + i + ") ==> " + detailStrings[i]);
 
             }   // for
 
@@ -73,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
                 intent.putExtra("Word", wordStrings[i]);
                 intent.putExtra("Detail", detailStrings[i]);
+
+                Log.d("2janV3", "Text ==> " + adapterView.getAdapter().getItem(i));
 
                 startActivity(intent);
 
