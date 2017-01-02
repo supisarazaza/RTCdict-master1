@@ -76,10 +76,12 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(MainActivity.this, Detailword.class);
 
-                intent.putExtra("Word", wordStrings[i]);
+                String s = (String) adapterView.getAdapter().getItem(i);
+
+                intent.putExtra("Word", s);
                 intent.putExtra("Detail", detailStrings[i]);
 
-                Log.d("2janV3", "Text ==> " + adapterView.getAdapter().getItem(i));
+                Log.d("2janV3", "Text Sent ==> " + s);
 
                 startActivity(intent);
 
